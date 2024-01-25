@@ -17,7 +17,7 @@ const customFetch = async (url: string, options: RequestInit) => {
     ...options,
     headers: {
       ...headers,
-      Authorization: headers?.Authorization || `Bear ${accessToken}`,
+      Authorization: headers?.Authorization || `Bearer ${accessToken}`,
       "Content-Type": "application/json",
       "Apollo-Require-Preflight": "true",
     },
