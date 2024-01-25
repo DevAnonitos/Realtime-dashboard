@@ -7,6 +7,7 @@ export const authCredentials = {
   password: "demodemo",
 };
 
+
 export const authProvider: AuthBindings = {
   login: async ({ email }) => {
     try {
