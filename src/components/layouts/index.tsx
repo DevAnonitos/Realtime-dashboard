@@ -10,7 +10,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
         Header={Header}
         Footer={Footer}
         Title={(titleProps) => {
-          return <ThemedTitleV2 {...titleProps} text="Refine" />;
+          return <ThemedTitleV2 {...titleProps} text="DevAnonitos"  />;
         }}
       >
         {children}
