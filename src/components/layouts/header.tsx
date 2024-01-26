@@ -17,6 +17,7 @@ const Header = () => {
     position: "sticky",
     top: "0px",
     zIndex: 999,
+    borderBottom: "1px solid #ddd",
   };
 
   return (
