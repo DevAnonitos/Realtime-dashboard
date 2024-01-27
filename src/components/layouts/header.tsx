@@ -4,7 +4,7 @@ import { Layout, Space, theme } from 'antd';
 
 const { useToken } = theme;
 
-const Header = () => {
+const Header = React.memo(() => {
 
   const { token } = useToken();
 
@@ -29,6 +29,6 @@ const Header = () => {
       </Layout.Header>
     </>
   );
-};
+});
 
 export default Header;

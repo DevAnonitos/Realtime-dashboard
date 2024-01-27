@@ -2,7 +2,7 @@ import React from 'react';
 import { Popover, Button } from 'antd';
 import { SettingOutlined } from "@ant-design/icons";
 
-const CurrentUser = () => {
+const CurrentUser = React.memo(() => {
 
   const content = (
     <>
@@ -48,6 +48,6 @@ const CurrentUser = () => {
       </Popover>
     </>
   );
-};
+});
 
 export default CurrentUser;
