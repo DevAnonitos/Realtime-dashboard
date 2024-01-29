@@ -1,13 +1,27 @@
 import React from 'react';
-import type { AvatarProps } from 'antd';
+import {Avatar as AntdAvatar, AvatarProps } from 'antd';
 
 type Props = AvatarProps & {
-  name: string;
+  name?: string;
 };
 
-const CustomAvatar = React.memo(() => {
+const CustomAvatar = React.memo(({ name="", style, ...rest }: Props) => {
   return (
-    <div>CustomAvatar</div>
+    <>
+      <AntdAvatar 
+        alt={'Dev'} 
+        size="large" 
+        style={{
+          backgroundColor: "#87d068",
+          display: 'flex',
+          alignItems: 'center',
+          border: 'none',
+          cursor: 'pointer'
+        }}
+      >
+        Dev
+      </AntdAvatar>
+    </>
   );
 });
 
