@@ -8,9 +8,9 @@ type Props = AvatarProps & {
 const CustomAvatar = React.memo(({ name="", style, ...rest }: Props) => {
   return (
     <>
-      <AntdAvatar 
-        alt={'Dev'} 
-        size="large" 
+      <AntdAvatar
+        alt={'Dev'}
+        size="large"
         style={{
           backgroundColor: "#87d068",
           display: 'flex',
@@ -19,7 +19,7 @@ const CustomAvatar = React.memo(({ name="", style, ...rest }: Props) => {
           cursor: 'pointer'
         }}
       >
-        Dev
+        {name}
       </AntdAvatar>
     </>
   );
