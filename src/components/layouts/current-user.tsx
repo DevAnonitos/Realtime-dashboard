@@ -3,11 +3,16 @@ import { Popover, Button } from 'antd';
 import { SettingOutlined } from "@ant-design/icons";
 import CustomAvatar from './custom-avatar';
 
+import { useGetIdentity } from '@refinedev/core';
+import type { User } from '@/graphql/schema.types';
+
 const CurrentUser = React.memo(() => {
+
+  const { data: user } = useGetIdentity<User>();
 
   const content = (
     <>
-      <div 
+      <div
         style={{
           display: "flex",
           flexDirection: "column",
@@ -38,11 +43,11 @@ const CurrentUser = React.memo(() => {
 
   return (
     <>
-      <Popover 
-        placement='bottomRight'  
-        trigger="click" 
+      <Popover
+        placement='bottomRight'
+        trigger="click"
         content={content}
-        overlayInnerStyle={{ padding: 0 }} 
+        overlayInnerStyle={{ padding: 0 }}
         overlayStyle={{ zIndex: 999 }}
       >
         <CustomAvatar />
