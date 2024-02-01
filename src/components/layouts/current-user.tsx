@@ -44,7 +44,7 @@ const CurrentUser = React.memo(() => {
         </div>
       </div>
     </>
-  )
+  );
 
   return (
     <>
