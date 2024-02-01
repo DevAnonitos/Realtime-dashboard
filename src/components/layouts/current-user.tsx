@@ -2,12 +2,14 @@ import React from 'react';
 import { Popover, Button } from 'antd';
 import { SettingOutlined } from "@ant-design/icons";
 import CustomAvatar from '../custom-avatar';
+import Text from '../text';
 
 import { useGetIdentity } from '@refinedev/core';
 import type { User } from '@/graphql/schema.types';
 
 const CurrentUser = React.memo(() => {
 
+  const [opened, setOpened] = React.useState(false);
   const { data: user } = useGetIdentity<User>();
 
   const content = (
@@ -18,6 +20,9 @@ const CurrentUser = React.memo(() => {
           flexDirection: "column",
         }}
       >
+        <Text strong style={{ padding: "12px 20px" }}>
+          {user?.name}
+        </Text>
         <div
           style={{
             borderTop: "1px solid #d9d9d9",
@@ -32,7 +37,7 @@ const CurrentUser = React.memo(() => {
             icon={<SettingOutlined />}
             type="text"
             block
-            // onClick={() => {}}
+            onClick={() => setOpened(true)}
           >
             Account settings
           </Button>
