@@ -6,6 +6,7 @@ import Text from '../../text';
 
 import { useGetIdentity } from '@refinedev/core';
 import type { User } from '@/graphql/schema.types';
+import AccountSetting from '../account-settings';
 
 const CurrentUser = React.memo(() => {
 
@@ -61,6 +62,15 @@ const CurrentUser = React.memo(() => {
           size="default"
           style={{ cursor: "pointer" }}
         />
+        {user && (
+          <>
+            <AccountSetting
+              opened={opened}
+              setOpened={setOpened}
+              userId={user.id}
+            />
+          </>
+        )}
       </Popover>
     </>
   );

@@ -5,17 +5,19 @@ import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 import { useNotificationProvider } from "@refinedev/antd";
 import "@refinedev/antd/dist/reset.css";
 
-import { 
-  dataProvider, 
-  liveProvider, 
-  authProvider, 
+import "./global.css";
+
+import {
+  dataProvider,
+  liveProvider,
+  authProvider,
 } from "./providers";
 
-import { 
-  Home, 
-  Login, 
-  Register, 
-  ForgotPassword 
+import {
+  Home,
+  Login,
+  Register,
+  ForgotPassword
 } from "./pages";
 import Layout from "./components/layouts";
 
@@ -25,11 +27,11 @@ import routerBindings, {
   UnsavedChangesNotifier,
 } from "@refinedev/react-router-v6";
 import { App as AntdApp } from "antd";
-import { 
-  BrowserRouter, 
-  Route, 
-  Routes, 
-  Outlet, 
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  Outlet,
 } from "react-router-dom";
 
 function App() {
@@ -56,7 +58,7 @@ function App() {
                   <Route path="/register" element={<Register />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/forgot-password" element={<ForgotPassword />} />
-                  <Route 
+                  <Route
                     element={
                       <Authenticated
                         key="authenticated-layout"
