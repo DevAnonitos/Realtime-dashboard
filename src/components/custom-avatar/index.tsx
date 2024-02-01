@@ -1,6 +1,6 @@
 import React from 'react';
 import {Avatar as AntdAvatar, AvatarProps } from 'antd';
-import { getNameInitials } from '@/utilities';
+import { getNameInitials, getRandomColorString } from '@/utilities';
 
 type Props = AvatarProps & {
   name?: string;
@@ -13,12 +13,14 @@ const CustomAvatar = React.memo(({ name="", style, ...rest }: Props) => {
         alt={'Dev'}
         size="large"
         style={{
-          backgroundColor: "#87d068",
+          backgroundColor: rest?.src ? "transparent" : getRandomColorString(name),
           display: 'flex',
           alignItems: 'center',
           border: 'none',
-          cursor: 'pointer'
+          cursor: 'pointer',
+          ...style,
         }}
+        {...rest}
       >
         {getNameInitials(name || "")}
       </AntdAvatar>
