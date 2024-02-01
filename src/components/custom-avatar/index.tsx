@@ -1,5 +1,6 @@
 import React from 'react';
 import {Avatar as AntdAvatar, AvatarProps } from 'antd';
+import { getNameInitials } from '@/utilities';
 
 type Props = AvatarProps & {
   name?: string;
@@ -19,7 +20,7 @@ const CustomAvatar = React.memo(({ name="", style, ...rest }: Props) => {
           cursor: 'pointer'
         }}
       >
-        {name}
+        {getNameInitials(name || "")}
       </AntdAvatar>
     </>
   );
