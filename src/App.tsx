@@ -2,7 +2,7 @@ import { Authenticated, Refine } from "@refinedev/core";
 import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
-import { useNotificationProvider } from "@refinedev/antd";
+import { useNotificationProvider, RefineThemes } from "@refinedev/antd";
 import "@refinedev/antd/dist/reset.css";
 
 import "./global.css";
@@ -26,7 +26,7 @@ import routerBindings, {
   DocumentTitleHandler,
   UnsavedChangesNotifier,
 } from "@refinedev/react-router-v6";
-import { App as AntdApp } from "antd";
+import { App as AntdApp, ConfigProvider } from "antd";
 import {
   BrowserRouter,
   Route,
@@ -38,6 +38,7 @@ function App() {
   return (
     <BrowserRouter>
       <RefineKbarProvider>
+        <ConfigProvider theme={RefineThemes.Blue}>
           <AntdApp>
             <DevtoolsProvider>
               <Refine
@@ -80,6 +81,7 @@ function App() {
               <DevtoolsPanel />
             </DevtoolsProvider>
           </AntdApp>
+        </ConfigProvider>
       </RefineKbarProvider>
     </BrowserRouter>
   );
