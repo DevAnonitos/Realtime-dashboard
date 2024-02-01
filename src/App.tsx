@@ -34,6 +34,8 @@ import {
   Outlet,
 } from "react-router-dom";
 
+import "@refinedev/antd/dist/reset.css";
+
 function App() {
   return (
     <BrowserRouter>
