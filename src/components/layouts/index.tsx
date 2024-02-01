@@ -19,7 +19,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
       >
         {children}
       </ThemedLayoutV2>
-    </> 
+    </>
   );
 };
 
