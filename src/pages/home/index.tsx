@@ -3,8 +3,18 @@ import { useCustom } from '@refinedev/core';
 
 import { Col, Row } from 'antd';
 import { DashboardTotalCountsQuery } from '@/graphql/types';
+import { DASHBOARD_TOTAL_COUNTS_QUERY } from "./queries";
 
 export const Home = () => {
+
+  const { data, isLoading } = useCustom<DashboardTotalCountsQuery>(
+    {
+      url: "",
+      method: "get",
+      meta: { gqlQuery: DASHBOARD_TOTAL_COUNTS_QUERY, },
+    }
+  );
+
   return (
     <>
       <div className='page-container'>
