@@ -40,7 +40,7 @@ function App() {
   return (
     <BrowserRouter>
       <RefineKbarProvider>
-        <ConfigProvider theme={RefineThemes.Blue}>
+        {/* <ConfigProvider> */}
           <AntdApp>
             <DevtoolsProvider>
               <Refine
@@ -83,7 +83,7 @@ function App() {
               <DevtoolsPanel />
             </DevtoolsProvider>
           </AntdApp>
-        </ConfigProvider>
+        {/* </ConfigProvider> */}
       </RefineKbarProvider>
     </BrowserRouter>
   );

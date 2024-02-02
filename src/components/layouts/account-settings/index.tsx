@@ -77,6 +77,9 @@ const AccountSetting = ({ opened, setOpened, userId }: AccountSettingProps) => {
                 <Input placeholder="Timezone" type="text" autoFocus />
               </Form.Item>
             </Form>
+            <SaveButton
+              className='block ml-auto bg-blue-400 rounded-lg'
+            />
           </Card>
         </div>
       </Drawer>
