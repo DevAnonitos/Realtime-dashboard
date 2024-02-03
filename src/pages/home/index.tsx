@@ -5,6 +5,8 @@ import { Col, Row } from 'antd';
 import { DashboardTotalCountsQuery } from '@/graphql/types';
 import { DASHBOARD_TOTAL_COUNTS_QUERY } from "./queries";
 
+import CalendarUpcomingEvents from './components/upcoming-events';
+
 export const Home = () => {
 
   const { data, isLoading } = useCustom<DashboardTotalCountsQuery>(
@@ -31,10 +33,11 @@ export const Home = () => {
         </Row>
 
         <Row gutter={[32, 32]} className='mt-8'>
-          <Col xs={24} sm={24} xl={8} className='h-[460px] bg-slate-400'>
-            Calendar
+          <Col xs={24} sm={24} xl={8} className='h-[460px]'>
+            <CalendarUpcomingEvents />
           </Col>
           <Col xs={24} sm={24} xl={16} className='h-[460px] bg-amber-400'>
+            DashBoarDeals
           </Col>
         </Row>
 

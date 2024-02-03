@@ -16,7 +16,23 @@ import Text from '@/components/text';
 
 const CalendarUpcomingEvents = () => {
   return (
-    <div>CalendarUpcomingEvents</div>
+    <>
+      <Card
+        style={{ height: "100%" }}
+        headStyle={{ padding: "8px 16px" }}
+        bodyStyle={{ padding: "0 1rem" }}
+        title={
+          <div className='flex items-center gap-2'>
+            <CalendarOutlined />
+            <Text size='sm' style={{ marginLeft: ".7rem" }}>
+
+            </Text>
+          </div>
+        }
+      >
+
+      </Card>
+    </>
   );
 };
 
